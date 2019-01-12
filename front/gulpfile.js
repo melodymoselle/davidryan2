@@ -1,26 +1,40 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
 
-gulp.task('sass', function () {
-	return gulp.src('assets/scss/**/*.scss')
-		.pipe(sass())
-		.pipe(gulp.dest('assets/css'))
-		.pipe(browserSync.reload({
-			stream: true
-		}))
-});
+const browsersync = require("browser-sync").create();
+const gulp = require("gulp");
+const sass = require("gulp-sass");
 
-gulp.task('browserSync', function () {
-	browserSync.init({
-		server: {
-			baseDir: ''
-		},
-	})
-})
+// BrowserSync
+function browserSync(done) {
+  browsersync.init({
+    server: {
+      baseDir: "./"
+    },
+    port: 3000
+  });
+  done();
+}
 
-gulp.task('watch', gulp.series(gulp.parallel('browserSync', 'sass'), function(){
-	gulp.watch('assets/scss/**/*.scss', ['sass']);
-	gulp.watch('*.html', browserSync.reload);
-	gulp.watch('assets/js/**/*.js', browserSync.reload);
-}));
+// BrowserSync Reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
+
+// CSS task
+function css() {
+  return gulp
+    .src("./assets/scss/**/*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("./assets/css/"))
+    .pipe(browsersync.stream());
+}
+
+// Watch files
+function watchFiles() {
+  gulp.watch("./assets/scss/**/*", css);
+  gulp.watch("./**/*.html", browserSyncReload);
+}
+
+const watch = gulp.parallel(watchFiles, browserSync);
+
+exports.watch = watch;
