@@ -4,3 +4,35 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+body {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    text-decoration: underline; }
+
+header {
+  width: 290px;
+  margin: 0 auto; }
+
+#logo {
+  font-family: 'Bungee', 'Arial Black', 'Arial', sans-serif;
+  font-size: 36px;
+  letter-spacing: 5px;
+  text-align: center;
+  margin-bottom: 0px; }
+
+nav {
+  padding: 0 2px;
+  display: flex;
+  justify-content: space-between; }
+  nav a {
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 4px; }
+    nav a:first-child {
+      text-align: left; }
+    nav a:last-child {
+      text-align: right; }
