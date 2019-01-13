@@ -29,10 +29,16 @@ nav {
   display: flex;
   justify-content: space-between; }
   nav a {
-    display: inline-block;
-    text-align: center;
     letter-spacing: 4px; }
-    nav a:first-child {
-      text-align: left; }
-    nav a:last-child {
-      text-align: right; }
+
+#works {
+  margin-top: 40px; }
+  #works figure {
+    margin: 0 10px;
+    margin-bottom: 50vh; }
+    #works figure img {
+      height: auto;
+      width: auto;
+      max-height: calc(100vh - 160px);
+      max-width: calc(100vw - 20px);
+      min-width: 280px; }
