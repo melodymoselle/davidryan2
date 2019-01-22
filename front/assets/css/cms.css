@@ -6950,3 +6950,12 @@ a.text-dark:hover, a.text-dark:focus {
       margin-bottom: 10px;
       border-top-left-radius: 0;
       border-top-right-radius: 0; }
+
+#works .container {
+  margin-top: 20px; }
+
+#works table .thumb {
+  width: 100px; }
+
+.thumb {
+  width: 100px; }
