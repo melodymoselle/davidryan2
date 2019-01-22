@@ -1,3 +1,9 @@
+@import "header";
+@import "works";
+@import "bio";
+@import "contact";
+
+
 @import url('https://fonts.googleapis.com/css?family=Bungee');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Hairline');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -7,6 +13,20 @@
 
 body {
 	font-family: 'Roboto Condensed', sans-serif;
+	letter-spacing: 2px;
+}
+
+section {
+	padding-left: 10px;
+	margin-top: 40px;
+}
+
+h3 {
+	// letter-spacing: 4px;
+	font-family: 'Roboto Mono', sans-serif;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 18px;
 }
 
 a {
@@ -17,45 +37,16 @@ a {
 	}
 }
 
-header {
-	width: 290px;
-	margin: 0 auto;
+ul {
+	list-style: none;
 }
 
-#logo {
-	font-family: 'Bungee', 'Arial Black', 'Arial', sans-serif;
-	font-size: 36px;
-	letter-spacing: 5px;
-	text-align: center;
-	margin-bottom: 0px;
-}
-
-nav {
-	padding: 0 2px;
-	display: flex;
-	justify-content: space-between;
-	a {
-		letter-spacing: 4px;
+#contact {
+	.address {
+		margin-bottom: 20px;
 	}
-}
-#works {
-	margin-top: 40px;
-	figure {
-		margin: 0 10px;
-		margin-bottom: 50vh;
-		img {
-			height: auto;
-			width: auto;
-			max-height: calc(100vh - 160px);
-			max-width: calc(100vw - 20px);
-			min-width: 280px;
-		}
-		figcaption {
-		}
-	}
-}
 
-
+}
 
 
 

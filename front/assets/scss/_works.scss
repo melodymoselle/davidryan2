@@ -1,0 +1,17 @@
+
+#works {
+	margin-top: 40px;
+	figure {
+		margin: 0 10px;
+		margin-bottom: 50vh;
+		img {
+			height: auto;
+			width: auto;
+			max-height: calc(100vh - 160px);
+			max-width: calc(100vw - 20px);
+			min-width: 280px;
+		}
+		figcaption {
+		}
+	}
+}
